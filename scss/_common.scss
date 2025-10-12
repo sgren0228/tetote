@@ -1,0 +1,54 @@
+.sec-title {
+    width: fit-content;
+    position: relative;
+    margin-bottom: 52px;
+    &__en {
+        color: #979797;
+        opacity: .1;
+        font-family: Poppins;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 136px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    &__ja {
+        font-family: Noto Sans JP;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 52px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+}
+.sec__description {
+    text-align: center;
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    margin-top: 52px;
+}
+.border {
+    border-bottom: 1px solid #000;
+}
+.sec-arrow {
+    width: 58px;
+    height: 58px;
+    background-color: #000;
+    border-radius: 50%;
+    background-image: url(/img/Arrow6.svg);
+    background-size: 16px;
+    background-position: center;
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+}

@@ -1,5 +1,5 @@
 .btn {
-    background-color: lightcoral;
+    display: block;
     color: #fff;
     font-family: Noto Sans JP;
     font-weight: 700;
@@ -15,4 +15,20 @@
 }
 .btn--entry {
     background-color: #AFA86F;
+}
+.btn--view {
+    width: 355px;
+    color: #000;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 124px;
+    border: 1px solid #000;
+    position: relative;
+
+    &::after {
+        width: 12px;
+        content: url(/img/arrow7.svg);
+        position: absolute;
+        right: 30px;
+    }
 }
