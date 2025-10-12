@@ -187,7 +187,124 @@
         margin-bottom: 52px;
     }
 }
+//member
+#member {
+    .sec__description {
+        text-align: left;
+    }
+}
+.member__wrapper {
+    max-width: 1232px;
+    width: 100%;
+    margin-left: auto;
+    padding: 200px 0;
+}
+.slideshow-container {
+    width: 100%;
+    overflow: hidden;
+}
 
+.slideshow-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%; 
+    display: flex;
+    gap: 33px;
+}
+
+.slide-image {
+    width: 300px;
+    height: 379px;
+
+    &:nth-child(2n) {
+        margin-top: 36px;
+    }
+}
+
+.prev-arrow,
+.next-arrow {
+    display: block;
+    cursor: pointer;
+    padding: 16px;
+    transition: 0.6s ease;
+    user-select: none;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+.prev-arrow:hover,
+.next-arrow:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.member__inner {
+    width: fit-content;
+    position: relative;
+    margin: 80px auto 0;
+}
+.arrow__inner {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    top: 50%;
+    right: -180px;
+    transform: translateY(-50%);
+}
+.hidden {
+    display: none;
+}
+.slide-list {
+    &:nth-child(2n) {
+        margin-top: 36px;
+    }
+}
+.member__img-inner {
+    position: relative;
+}
+.member__voice-box {
+    position: absolute;
+    bottom: -3%;
+}
+.member__voice {
+    font-family: Noto Sans JP;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    background-color: #AFA86F;
+    padding: 5px 7px;
+
+    &:nth-child(1) {
+        margin-bottom: 11px;
+    }
+}
+.member__info {
+    display: flex;
+    margin-top: 34px;
+}
+.member__status,
+.member__date {
+    font-family: Noto Sans JP;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    display: block;
+}
+.member__status {
+    margin-right: 9px;
+}
+.member__name {
+    display: block;
+    font-family: Noto Sans JP;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 16px;
+}
 //benefits 
 #benefits {
     padding: 45px 0 104px;
@@ -273,7 +390,7 @@
     background-color: #fff;
     border: 1px solid #000;
     top: 0;
-    right: 10%;
+    right: 15%;
 
     &::after {
         content: "VIEW MORE";
@@ -345,4 +462,47 @@
 }
 .blog-item__date {
     margin-top: auto;
+}
+
+//recruitment
+#recruitment {
+    background-color: #FAF7F1;
+    padding: 45px 140px;
+    .sec-title {
+        margin: 0 auto;
+    }
+}
+.recruitment__wrapper {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+.recruitment__items {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 21px 16px;
+}
+.recruitment__item {
+    width: 100%;
+    font-family: Noto Sans JP;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background-color: #fff;
+    display: block;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+
+    &:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    img {
+        width: 20px;
+        position: absolute;
+        right: 20px;
+    }
 }

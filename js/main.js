@@ -32,3 +32,53 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.slideshow-track');
+    const prevArrow = document.querySelector('.prev-arrow');
+    const nextArrow = document.querySelector('.next-arrow');
+    const images = Array.from(track.children);
+    
+    // 1枚あたりのスライド移動量を計算 (6枚中の1枚分)
+    const slideWidth = 100 / 6;
+
+    let currentIndex = 0;
+    const maxIndex = images.length - 4; // 3枚表示なので、移動できるのは (全長 - 表示枚数) 分
+
+    function updateSlidePosition() {
+        track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+    }
+
+    function updateArrows() {
+        if (currentIndex === 0) {
+            prevArrow.classList.add('hidden');
+        } else {
+            prevArrow.classList.remove('hidden');
+        }
+
+        if (currentIndex === maxIndex) {
+            nextArrow.classList.add('hidden');
+        } else {
+            nextArrow.classList.remove('hidden');
+        }
+    }
+
+    nextArrow.addEventListener('click', () => {
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateSlidePosition();
+            updateArrows();
+        }
+    });
+
+    prevArrow.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlidePosition();
+            updateArrows();
+        }
+    });
+
+    // 初期状態の設定
+    updateArrows();
+});

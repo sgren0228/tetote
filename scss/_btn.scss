@@ -32,3 +32,17 @@
         right: 30px;
     }
 }
+.btn--cta {
+    color: #222;
+    background-color: #AFA86F;
+    position: relative;
+    text-align: center;
+    padding: 27px 0;
+
+    &::after {
+        width: 12px;
+        content: url(/img/arrow7.svg);
+        position: absolute;
+        right: 30px;
+    }
+}
