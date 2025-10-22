@@ -1,60 +1,15 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Viga&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header id="header">
-        <div class="header__wrapper">
-            <div class="header__left">
-                <h1>
-                    <a href="index.html"><img src="img/tetote-logo-white.png" alt="" class="logo logo--white"></a>
-                    <a href="index.html"><img src="img/tetote-logo-black.png" alt="" class="logo logo--black"></a>
-                </h1>
-            </div>
-            <div class="header__right">
-                <a href="" class="btn btn--recruit">募集要項</a>
-                <a href="" class="btn btn--entry">ENTRY</a>
-                <div id="hamburger"><span></span><span></span><span></span></div>
-            </div>
-        </div>
-    </header>
-    <div class="header-menu">
-        <div class="header-menu__wrapper">
-            <div class="header-menu__left">
-                <img src="img/tetote-logo-black.png" alt="">
-            </div>
-            <div class="header-menu__right">
-                <ul class="menu">
-                    <li class="menu__list">ABOUT US<span>TETOTEについて</span></li>
-                    <li class="menu__list">BENEFITS<span>福利厚生について</span></li>
-                    <li class="menu__list">STAFF<span>社員について</span></li>
-                    <li class="menu__list">CARRER<span>研修制度とキャリアパス</span></li>
-                    <li class="menu__list">BLOG<span>採用ブログ</span></li>
-                    <li class="menu__list">FAQ<span>よくある質問</span></li>
-                    <li class="menu__list"><a href="" class="btn btn--recruit btn--header-menu">募集要項</a></li>
-                    <li class="menu__list"><a href="" class="btn btn--entry btn--header-menu">ENTRY</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
+<?php get_header(); ?>    
     <main>
         <section id="fv">
             <div class="fv__wrapper">
                 <div class="fv-slideshow">
                     <ul class="fv-slideshow__list">
                         <li class="fv-slideshow__item is-active">
-                            <img src="img/fv01.png" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/fv01.png'); ?>" alt="">
                         </li>
                         <li class="fv-slideshow__item">
-                            <img src="img/fv02.png" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/fv02.png'); ?>" alt="">
+                        </li>
                         </li>
                     </ul>
                 </div>
@@ -73,12 +28,12 @@
             <div class="about__wrapper">
                 <div class="about-slider">
                     <div class="about-slider__wrapper">
-                        <div class="about-slider__item"><img src="img/slide01.jpg" alt=""></div>
-                        <div class="about-slider__item about-slider__item--second"><img src="img/slide02.jpg" alt=""></div>
-                        <div class="about-slider__item"><img src="img/slide03.jpg" alt=""></div>
-                        <div class="about-slider__item"><img src="img/slide01.jpg" alt=""></div>
-                        <div class="about-slider__item"><img src="img/slide02.jpg" alt=""></div>
-                        <div class="about-slider__item"><img src="img/slide03.jpg" alt=""></div>
+                        <div class="about-slider__item"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/slide01.jpg'); ?>" alt=""></div>
+                        <div class="about-slider__item about-slider__item--second"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/slide02.jpg'); ?>" alt=""></div>
+                        <div class="about-slider__item"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/slide03.jpg'); ?>" alt=""></div>
+                        <div class="about-slider__item"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/slide01.jpg'); ?>" alt=""></div>
+                        <div class="about-slider__item"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/slide02.jpg'); ?>" alt=""></div>
+                        <div class="about-slider__item"><img src="<?php echo esc_url(get_template_directory_uri() . '/img/slide03.jpg'); ?>" alt=""></div>
                     </div>
                     <div class="about-slider__box">
                         <p class="about-slider__text">後悔しないキャリアを作る、</p>
@@ -113,7 +68,7 @@
                     <ul class="slideshow-track">
                         <li class="slide-list">
                             <div class="member__img-inner">
-                                <img src="img/syain01.png" alt="Slide 1" class="slide-image">
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/syain01.png'); ?>" alt="Slide 1" class="slide-image">
                                 <div class="member__voice-box">
                                     <p class="member__voice">「あなたが担当で良かった」</p>
                                     <p class="member__voice">この一言が、最高のやりがい</p>
@@ -128,7 +83,7 @@
 
                         <li class="slide-list">
                             <div class="member__img-inner">
-                                <img src="img/syain02.png" alt="Slide 2" class="slide-image">
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/syain02.png'); ?>" alt="Slide 2" class="slide-image">
                                 <div class="member__voice-box">
                                     <p class="member__voice">全力で考えぬける環境</p>
                                     <p class="member__voice">試練の数だけ強くなれました</p>
@@ -143,7 +98,7 @@
 
                         <li class="slide-list">
                             <div class="member__img-inner">
-                                <img src="img/syain03.png" alt="Slide 3" class="slide-image">
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/syain03.png'); ?>" alt="Slide 3" class="slide-image">
                                 <div class="member__voice-box">
                                     <p class="member__voice">お客様も知らない課題を</p>
                                     <p class="member__voice">一緒に探し出す醍醐味</p>
@@ -158,7 +113,7 @@
 
                         <li class="slide-list">
                             <div class="member__img-inner">
-                                <img src="img/syain04.png" alt="Slide 4" class="slide-image">
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/syain04.png'); ?>" alt="Slide 4" class="slide-image">
                                 <div class="member__voice-box">
                                     <p class="member__voice">ビジネスの課題を</p>
                                     <p class="member__voice">データで解決する醍醐味</p>
@@ -173,7 +128,7 @@
 
                         <li class="slide-list">
                             <div class="member__img-inner">
-                                <img src="img/syain05.png" alt="Slide 5" class="slide-image">
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/syain05.png'); ?>" alt="Slide 5" class="slide-image">
                                 <div class="member__voice-box">
                                     <p class="member__voice">どんな難解な案件も</p>
                                     <p class="member__voice">チームで突破できる強い連携</p>
@@ -188,7 +143,7 @@
 
                         <li class="slide-list">
                             <div class="member__img-inner">
-                                <img src="img/syain06.png" alt="Slide 6" class="slide-image">
+                                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/syain06.png'); ?>" alt="Slide 6" class="slide-image">
                                 <div class="member__voice-box">
                                     <p class="member__voice">お客様と一緒に開発</p>
                                     <p class="member__voice">豊富なプライム案件が魅力です</p>
@@ -205,8 +160,8 @@
                 <div class="member__inner">
                     <a href="" class="btn btn--view">VIEW MORE</a>
                     <div class="arrow__inner">
-                        <img src="img/Arrow3.png" alt="Previous" class="prev-arrow">
-                        <img src="img/Arrow4.png" alt="Next" class="next-arrow">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/Arrow3.png'); ?>" alt="Previous" class="prev-arrow">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/Arrow4.png'); ?>" alt="Next" class="next-arrow">
                     </div>
                 </div>
             </div>
@@ -222,7 +177,7 @@
                 <div class="benefits__items">
                     <div class="benefits__item">
                         <div class="benefits-icon">
-                            <img src="img/benefits1.svg" alt="" class="benefits-icon__img">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/benefits1.svg'); ?>" alt="" class="benefits-icon__img">
                             <p class="benefits-icon__title--ja">研修制度とキャリアパス</p>
                             <p class="benefits-icon__title--en">Traning And Career</p>
                             <div class="sec-arrow"></div>
@@ -231,7 +186,7 @@
                     </div>
                     <div class="benefits__item">
                         <div class="benefits-icon">
-                            <img src="img/benefits2.svg" alt="" class="benefits-icon__img">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/benefits2.svg'); ?>" alt="" class="benefits-icon__img">
                             <p class="benefits-icon__title--ja">福利厚生</p>
                             <p class="benefits-icon__title--en">Employee Benefits</p>
                             <div class="sec-arrow"></div>
@@ -255,7 +210,7 @@
                 <div class="blog__items">
                     <article class="blog-item">
                         <figure class="blog-item__img">
-                            <img src="img/blog1.jpg" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/blog1.jpg'); ?>" alt="">
                         </figure>
                         <div class="blog-item__inner">
                             <span class="blog-item__category">社内研修</span>
@@ -265,7 +220,7 @@
                     </article>
                     <article class="blog-item">
                         <figure class="blog-item__img">
-                            <img src="img/blog2.jpg" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/blog2.jpg'); ?>" alt="">
                         </figure>
                         <div class="blog-item__inner">
                             <span class="blog-item__category">社内研修</span>
@@ -275,7 +230,7 @@
                     </article>
                     <article class="blog-item">
                         <figure class="blog-item__img">
-                            <img src="img/blog3.jpg" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/blog3.jpg'); ?>" alt="">
                         </figure>
                         <div class="blog-item__inner">
                             <span class="blog-item__category">社内研修</span>
@@ -285,7 +240,7 @@
                     </article>
                     <article class="blog-item">
                         <figure class="blog-item__img">
-                            <img src="img/blog4.jpg" alt="">
+                            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/blog4.jpg'); ?>" alt="">
                         </figure>
                         <div class="blog-item__inner">
                             <span class="blog-item__category">社内研修</span>
@@ -307,48 +262,11 @@
                     募集要項（職種、業務内容、応募条件、選考フロー）とよくある質問・会社概要などをまとめています。
                 </p>
                 <div class="recruitment__items">
-                    <a href="" class="recruitment__item">募集要項<img src="img/arrow7.svg" alt=""></a>
-                    <a href="" class="recruitment__item">よくある質問<img src="img/arrow7.svg" alt=""></a>
-                    <a href="" class="recruitment__item">会社概要<img src="img/arrow7.svg" alt=""></a>
+                    <a href="" class="recruitment__item">募集要項<img src="<?php echo esc_url(get_template_directory_uri() . '/img/arrow7.svg'); ?>" alt=""></a>
+                    <a href="" class="recruitment__item">よくある質問<img src="<?php echo esc_url(get_template_directory_uri() . '/img/arrow7.svg'); ?>" alt=""></a>
+                    <a href="" class="recruitment__item">会社概要<img src="<?php echo esc_url(get_template_directory_uri() . '/img/arrow7.svg'); ?>" alt=""></a>
                 </div>
             </div>
         </section>
     </main>
-    <footer id="footer">
-        <div class="footer-bg"></div>
-        <div class="footer-cta">
-            <p class="footer-cta__text">
-                わたしたちと一緒に働く仲間を募集中です。<br>少数精鋭のチームで、<br>あなたも会社も一緒に成長していきましょう。
-            </p>
-            <a href="" class="btn btn--cta">ENTRY</a>
-        </div>
-        <div class="footer__wrapper">
-            <div class="footer__inner-top">
-                <a href=""><img src="img/tetote-logo-black.png" alt="" class="logo--pc"></a>
-                <ul class="footer-menu">
-                    <li class="footer-menu__list">ホーム<a href=""></a></li>
-                    <li class="footer-menu__list">TETOTEについて<a href=""></a></li>
-                    <li class="footer-menu__list">人を知る<a href=""></a></li>
-                    <li class="footer-menu__list">研修制度とキャリアパス<a href=""></a></li>
-                    <li class="footer-menu__list">福利厚生<a href=""></a></li>
-                    <li class="footer-menu__list">採用ブログ<a href=""></a></li>
-                    <li class="footer-menu__list">募集要項<a href=""></a></li>
-                    <li class="footer-menu__list">よくある質問<a href=""></a></li>
-                    <li class="footer-menu__list">会社概要<a href=""></a></li>
-                </ul>
-            </div>
-            <div class="footer__inner-bottom">
-                <p class="copyright">© 2024 TETOTE All Right Reserved.</p>
-                <img src="img/tetote-logo-black.png" alt="" class="logo--sp">
-                <div class="footer__sns">
-                    <a href=""><img src="img/youtube.png" alt=""></a>
-                    <a href=""><img src="img/twitter.png" alt=""></a>
-                    <a href=""><img src="img/facebook.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>

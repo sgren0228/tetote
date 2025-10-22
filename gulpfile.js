@@ -5,7 +5,7 @@ const browserSync = require('browser-sync').create();
 // scss
 function compileSass() {
   return gulp.src('scss/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(gulp.dest('css'))
     .pipe(browserSync.stream());
 }
@@ -24,6 +24,7 @@ function server(done) {
 function watchFiles() {
   gulp.watch('scss/**/*.scss', compileSass);
   gulp.watch('./*.html').on('change', browserSync.reload);
+  gulp.watch('./*.php').on('change', browserSync.reload);
 }
 
 exports.default = gulp.parallel(server, watchFiles, compileSass);

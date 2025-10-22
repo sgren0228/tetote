@@ -1,11 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
 
-  // スライドショーの処理
+  // FV スライドショーの処理
   const slides = document.querySelectorAll('.fv-slideshow__item');
-  
-  // スライドが2枚以上ある場合のみ実行
   if (slides.length > 1) {
-    let currentIndex = 0;
     const slideInterval = 4000; // 4秒ごとにスライドを切り替え (ミリ秒)
 
     // 初期状態で最初のスライドにis-activeがない場合、ここで付与する
@@ -26,41 +23,28 @@ document.addEventListener('DOMContentLoaded', function() {
           slides[currentActiveIndex].classList.remove('is-active');
           const nextIndex = (currentActiveIndex + 1) % slides.length;
           slides[nextIndex].classList.add('is-active');
-      }      
-
+      }
     }, slideInterval);
   }
 
-});
+  // Member スライドショーの処理
+  const track = document.querySelector('.slideshow-track');
+  const prevArrow = document.querySelector('.prev-arrow');
+  const nextArrow = document.querySelector('.next-arrow');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.slideshow-track');
-    const prevArrow = document.querySelector('.prev-arrow');
-    const nextArrow = document.querySelector('.next-arrow');
+  if (track && prevArrow && nextArrow) {
     const images = Array.from(track.children);
-    
-    // 1枚あたりのスライド移動量を計算 (6枚中の1枚分)
     const slideWidth = 100 / 6;
-
     let currentIndex = 0;
-    const maxIndex = images.length - 4; // 3枚表示なので、移動できるのは (全長 - 表示枚数) 分
+    const maxIndex = images.length - 4;
 
     function updateSlidePosition() {
         track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
     }
 
     function updateArrows() {
-        if (currentIndex === 0) {
-            prevArrow.classList.add('hidden');
-        } else {
-            prevArrow.classList.remove('hidden');
-        }
-
-        if (currentIndex === maxIndex) {
-            nextArrow.classList.add('hidden');
-        } else {
-            nextArrow.classList.remove('hidden');
-        }
+        prevArrow.classList.toggle('hidden', currentIndex === 0);
+        nextArrow.classList.toggle('hidden', currentIndex === maxIndex);
     }
 
     nextArrow.addEventListener('click', () => {
@@ -79,6 +63,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 初期状態の設定
     updateArrows();
+  }
+
+  // ハンバーガーメニューの処理
+  const hamburger = document.getElementById('hamburger');
+  const headerMenu = document.querySelector('.header-menu');
+  const header = document.getElementById('header');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+        headerMenu.classList.toggle('is-active');
+        header.classList.toggle('is-active');
+    });
+
+    //ヘッダー切り替え
+    window.addEventListener('load', () => {
+        const fv = document.getElementById('fv');
+        if (fv) {
+            const fvHeight = fv.offsetHeight;
+            
+            window.addEventListener('scroll',() => {
+                if (window.scrollY > fvHeight) {
+                    header.classList.add('is-scroll');
+
+                } else {
+                    header.classList.remove('is-scroll');
+                }
+            });
+        }
+    });
 });

@@ -24,7 +24,9 @@ html {
   margin: 0;
   padding: 0;
 }
-
+li {
+  list-style: none;
+}
 body {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
